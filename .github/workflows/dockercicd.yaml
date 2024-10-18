@@ -27,7 +27,7 @@ jobs:
         env:
           NAME: dragonhailstone
           REPO: dockercicd
-        run:
+        run: |
           docker build -t $REPO .
           docker tag $REPO:latest $NAME/$REPO:latest
           docker push $NAME/$REPO:latest
